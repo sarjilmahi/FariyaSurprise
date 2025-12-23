@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surprise for Fariya</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Comic Neue', cursive;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      background-size: cover;
+      background-attachment: fixed;
+      min-height: 100vh;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 5px solid #ff6f61;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    h1, h2 {
+      font-family: 'Luckiest Guy', cursive;
+      color: #ff6f61;
+    }
+    .caption {
+      font-style: italic;
+      margin-top: 10px;
+      color: #555;
+    }
+    .option-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .option-buttons button {
+      padding: 15px 25px;
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 18px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .option-buttons button:hover {
+      background-color: #d85a50;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Fariya, A Little Surprise Awaits!</h1>
+    <p class="caption">Choose what you’d like to see next – it’s all for you 💖</p>
+
+    <div class="option-buttons">
+      <button onclick="nextStep('note')">Send Me a Cute Note</button>
+      <button onclick="nextStep('fun')">Surprise Me!</button>
+    </div>
+  </div>
+
+  <audio id="music" autoplay loop>
+    <source src="./music/cute.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    function nextStep(option) {
+      if(option === 'note') {
+        alert("Yay! Let's write a sweet message for Fariya 💖");
+        window.location.href = 'contact.html'; // Make sure this points to your rewritten Contact page
+      } else {
+        alert("Surprise! 😄 You clicked the fun button, hope it made you smile!");
+      }
+    }
+  </script>
+</body>
+</html>

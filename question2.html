@@ -1,0 +1,98 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Just Wondering, Fariya!</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Comic Neue', cursive;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      background-size: cover;
+      background-attachment: fixed;
+      min-height: 100vh;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 5px dashed #ff6f61;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 36px;
+      color: #ff6f61;
+      margin-bottom: 20px;
+    }
+    .video-container img {
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      display: block;
+    }
+    .question p {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+    .button-container {
+      margin-top: 20px;
+    }
+    .button {
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .button:hover {
+      background-color: #d85a50;
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Fariya, a quick question! 😄</h1>
+    <div class="video-container">
+      <img src="./img/sleep.webp" alt="Cute GIF" />
+    </div>
+    <div class="question">
+      <p>Do you ever look this adorable when relaxing?</p>
+    </div>
+    <div class="button-container">
+      <button class="button" id="yes-btn" onclick="nextQuestion('yes')">Yes, maybe 😄</button>
+      <button class="button" onclick="nextQuestion('no')">Nope, I'm always cool 😎</button>
+    </div>
+  </div>
+
+  <audio id="music" autoplay loop>
+    <source src="./music/cute.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    function nextQuestion(answer) {
+      if(answer === 'yes') {
+        window.location.href = 'final.html'; // Goes to sister surprise page
+      } else {
+        alert("Haha, I knew you were cool, Fariya! 😄💖");
+      }
+    }
+  </script>
+</body>
+</html>
