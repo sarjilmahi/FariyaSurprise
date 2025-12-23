@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To My Sister – Fariya</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Comic Neue', cursive;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      background-size: cover;
+      background-attachment: fixed;
+      min-height: 100vh;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 2.8em;
+      color: #ff6f61;
+      text-shadow: 2px 2px #ff1493;
+      animation: bounce 2s infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    .video-container {
+      margin: 20px 0;
+    }
+    .video-container img {
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .question {
+      margin: 20px 0;
+      font-size: 1.4em;
+      color: #ff4500;
+      line-height: 1.6;
+      animation: fadeIn 2s;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .button {
+      padding: 15px 30px;
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 18px;
+      animation: float 2s infinite;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s, background-color 0.3s;
+    }
+    .button:hover {
+      transform: scale(1.1);
+      background-color: #ff1493;
+    }
+    .button.no {
+      background-color: #ff4500;
+    }
+    .button.no:hover {
+      background-color: #e63900;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .hamster-container {
+      margin: 20px 0;
+    }
+    .hamster {
+      display: block;
+      margin: 0 auto;
+      border: 5px solid #ff6f61;
+      border-radius: 50%;
+      animation: hamster-dance 3s infinite;
+    }
+    @keyframes hamster-dance {
+      0% { transform: scale(1) rotate(0deg); }
+      25% { transform: scale(1.1) rotate(10deg); }
+      50% { transform: scale(0.9) rotate(-10deg); }
+      75% { transform: scale(1.1) rotate(10deg); }
+      100% { transform: scale(1) rotate(0deg); }
+    }
+    .hamster-container:hover .hamster {
+      animation: hamster-spin 1s infinite;
+    }
+    @keyframes hamster-spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .play-music-button {
+      background-color: #ff6f61;
+      margin-top: 40px;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: transform 0.3s, background-color 0.3s;
+      animation: music-note 0.5s infinite;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .play-music-button:hover {
+      transform: scale(1.1);
+      background-color: #ff1493;
+    }
+    @keyframes music-note {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.3em; }
+      .question { font-size: 1.2em; }
+      .button { padding: 10px 20px; font-size: 16px; }
+      .play-music-button { padding: 10px 20px; font-size: 16px; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 1.9em; }
+      .question { font-size: 1em; }
+      .button { padding: 8px 16px; font-size: 14px; }
+      .play-music-button { padding: 8px 16px; font-size: 14px; }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Fariya — more than a sister, you became a blessing I never knew I needed.</h1>
+
+  <div class="video-container">
+    <img src="./img/ahatamatar.gif" alt="GIF" width="200" height="200">
+  </div>
+
+  <div class="question">
+    <p>
+      I don't have any real sisters. Though I have cousins and they are kind, no one ever came as close to my heart as you did.
+    </p>
+    <p>
+      You approached me first and treated me like your own little brother. After coming to a new country, I didn’t expect to have a family there.
+    </p>
+    <p>
+      The help and care I received from you can never be repaid. Always remember, you have your little brother who will always be here for you.
+    </p>
+  </div>
+
+  <div class="button-container">
+    <button class="button yes" onclick="nextQuestion('yes')">Yes 😊</button>
+    <button class="button no" onclick="nextQuestion('no')">No 😐</button>
+  </div>
+
+  <div class="hamster-container">
+    <img src="./img/hamster.jpg" alt="Hamster" height="100" class="hamster">
+  </div>
+
+  <audio id="music" autoplay loop>
+    <source src="./music/cute.mp3" type="audio/mp3">
+  </audio>
+
+  <button class="play-music-button" onclick="playMusic()">Play Music 🎵</button>
+
+  <script>
+    function playMusic() {
+      document.getElementById("music").play();
+    }
+
+    function nextQuestion(answer) {
+      if(answer === 'yes') {
+        alert("You always cared for me more than I deserved. Thank you, sis ❤️");
+      } else {
+        alert("Even if you click no, I still love you, silly sister 😄💕");
+      }
+    }
+  </script>
+</body>
+</html>
